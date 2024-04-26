@@ -6,20 +6,19 @@ using namespace std;
 class Solution{
 public:
     int findMin(int arr[], int n){
-        
-        int low = 0;
-        int high = n-1;
+    
+    int low = 0;
+    int high = n-1;
 
-        int ans = INT_MAX;
+    int ans = INT_MAX;
 
-        while(low<=high){
-            int mid = (low+high)/2;
+    while(low<=high){
+        int mid = (low+high)/2;
 
-            if(arr[low] <= arr[mid]){
-                ans  = min(ans,arr[low]);
+        if(arr[low]<=arr[mid]){
+                ans = min(ans,arr[low]);
                 low = mid+1;
-            }
-
+         }
             else{
                 high = mid-1;
                 ans = min(ans,arr[mid]);
